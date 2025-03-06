@@ -250,6 +250,11 @@ juce::AudioProcessorValueTreeState::ParameterLayout SimpleEQAudioProcessor::crea
                                                            "Peak Freq", 
                                                            juce::NormalisableRange<float>(20.f, 20000.f, 1.f, 1.f),
                                                            750.f));
+
+    layout.add(std::make_unique<juce::AudioParameterFloat>("Peak Gain", 
+                                                            "Peak Gain", 
+                                                            juce::NormalisableRange<float>(-24.f, 24.f, 1.f, 1.f),
+                                                            750.f));
     
     layout.add(std::make_unique<juce::AudioParameterFloat>("Peak Quality", 
                                                            "Peak Quality", 
